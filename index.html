@@ -595,7 +595,7 @@
 
             click1012 = new Date().getTime();
 
-            if (click1012 - click1011 <= 300) {
+            
                 element.style.borderColor = "black";
                 if (element.style.backgroundColor === "white") {
                     element.style.backgroundColor = "gray"; // グレーに変更
@@ -621,24 +621,8 @@
                 else {
                     element.style.backgroundColor = "white"; // 白に変更
                 }
-            }
-            else if (click1012 - click1011 >= 500 && click1012 - click1011 <= 1000) {   // 予約回転
-                element.style.borderColor = "blue";
-                element.style.backgroundColor = "green";
-
-                // 85分後に色を黄色に変更するタイマーを設定
-                setTimeout(() => {　//　時間オーバー
-                    if (element.style.backgroundColor === "green") {
-                        element.style.backgroundColor = "yellow";
-                    }
-                }, 3000);
-                // 90分後赤に変更
-                setTimeout(() => {　//　時間オーバー
-                    if (element.style.backgroundColor === "yellow") {
-                        element.style.backgroundColor = "red";
-                    }
-                }, 5000);
-            }
+            
+            
             click1011 = click1012;
         }
 
