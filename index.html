@@ -595,7 +595,7 @@
 
             click1012 = new Date().getTime();
 
-            
+            if(click1012 - click1011 <= 500){
                 element.style.borderColor = "black";
                 if (element.style.backgroundColor === "white") {
                     element.style.backgroundColor = "gray"; // グレーに変更
@@ -621,7 +621,7 @@
                 else {
                     element.style.backgroundColor = "white"; // 白に変更
                 }
-            
+            } 
             
            click1011 = click1012;
         }
