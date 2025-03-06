@@ -12,15 +12,24 @@
             align-items: center;
             height: 100vh;
             background-color: #f0f0f0;
+            flex-direction: column;
         }
         #time {
             font-size: 2em;
             color: #333;
+            margin-bottom: 20px;
+        }
+        #timestamps {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 1.5em;
         }
     </style>
 </head>
 <body>
     <div id="time">ここをタップしてください</div>
+    <ul id="timestamps"></ul>
     <script>
         document.getElementById('time').addEventListener('click', function() {
             const now = new Date();
@@ -29,7 +38,10 @@
             const seconds = now.getSeconds().toString().padStart(2, '0');
             const milliseconds = now.getMilliseconds().toString().padStart(3, '0');
             const timeString = `${hours}:${minutes}:${seconds}.${milliseconds}`;
-            this.textContent = `タップした時間: ${timeString}`;
+
+            const li = document.createElement('li');
+            li.textContent = `タップした時間: ${timeString}`;
+            document.getElementById('timestamps').appendChild(li);
         });
     </script>
 </body>
