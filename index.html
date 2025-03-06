@@ -1,0 +1,2535 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タッチで色が変わる四角形</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: black;
+            cursor: pointer;
+            border: 2px solid black; /* ここで枠の色を指定 */
+        }
+
+        #box101 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 360px;
+        }
+
+        #box102 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 310px;
+        }
+
+        #box103 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 260px;
+        }
+
+        #box104 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 210px;
+        }
+
+        #box105 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 160px;
+        }
+
+        #box106 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 130px;
+        }
+
+        #box107 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 80px;
+        }
+
+        #box108 {
+            background-color: white;
+            position: absolute;
+            left: 850px;
+            top: 50px;
+        }
+
+        #box109 {
+            background-color: white;
+            position: absolute;
+            left: 950px;
+            top: 50px;
+        }
+
+        #box110 {
+            background-color: white;
+            position: absolute;
+            left: 1050px;
+            top: 50px;
+        }
+
+        #box111 {
+            background-color: white;
+            position: absolute;
+            left: 1150px;
+            top: 50px;
+        }
+
+        #box112 {
+            background-color: white;
+            position: absolute;
+            left: 1150px;
+            top: 120px;
+        }
+
+        #box113 {
+            background-color: white;
+            position: absolute;
+            left: 1050px;
+            top: 150px;
+        }
+
+        #box114 {
+            background-color: white;
+            position: absolute;
+            left: 1050px;
+            top: 230px;
+        }
+
+        #box115 {
+            background-color: white;
+            position: absolute;
+            left: 1050px;
+            top: 260px;
+        }
+
+        #box116 {
+            background-color: white;
+            position: absolute;
+            left: 1050px;
+            top: 340px;
+        }
+
+        #box117 {
+            background-color: white;
+            position: absolute;
+            left: 1050px;
+            top: 370px;
+        }
+
+
+        #box201 {
+            background-color: white;
+            position: absolute;
+            left: 450px;
+            top: 320px;
+        }
+
+        #box202 {
+            background-color: white;
+            position: absolute;
+            left: 450px;
+            top: 250px;
+        }
+
+        #box203 {
+            background-color: white;
+            position: absolute;
+            left: 450px;
+            top: 220px;
+        }
+
+        #box204 {
+            background-color: white;
+            position: absolute;
+            left: 450px;
+            top: 150px;
+        }
+
+        #box205 {
+            background-color: white;
+            position: absolute;
+            left: 450px;
+            top: 120px;
+        }
+
+        #box206 {
+            background-color: white;
+            position: absolute;
+            left: 450px;
+            top: 50px;
+        }
+
+        #box207 {
+            background-color: white;
+            position: absolute;
+            left: 550px;
+            top: 50px;
+        }
+
+        #box208 {
+            background-color: white;
+            position: absolute;
+            left: 700px;
+            top: 50px;
+        }
+
+        #box209 {
+            background-color: white;
+            position: absolute;
+            left: 700px;
+            top: 130px;
+        }
+
+        #box210 {
+            background-color: white;
+            position: absolute;
+            left: 700px;
+            top: 210px;
+        }
+
+        #box211 {
+            background-color: white;
+            position: absolute;
+            left: 700px;
+            top: 290px;
+        }
+
+        #box212 {
+            background-color: white;
+            position: absolute;
+            left: 700px;
+            top: 370px;
+        }
+
+        #box213 {
+            background-color: white;
+            position: absolute;
+            left: 600px;
+            top: 370px;
+        }
+
+        #box214 {
+            background-color: white;
+            position: absolute;
+            left: 530px;
+            top: 180px;
+        }
+
+        #box215 {
+            background-color: white;
+            position: absolute;
+            left: 610px;
+            top: 180px;
+        }
+
+        #box301 {
+            background-color: white;
+            position: absolute;
+            left: 250px;
+            top: 370px;
+        }
+
+        #box302 {
+            background-color: white;
+            position: absolute;
+            left: 150px;
+            top: 370px;
+        }
+
+        #box303 {
+            background-color: white;
+            position: absolute;
+            left: 20px;
+            top: 370px;
+        }
+
+        #box304 {
+            background-color: white;
+            position: absolute;
+            left: 20px;
+            top: 290px;
+        }
+
+        #box305 {
+            background-color: white;
+            position: absolute;
+            left: 20px;
+            top: 210px;
+        }
+
+        #box306 {
+            background-color: white;
+            position: absolute;
+            left: 20px;
+            top: 130px;
+        }
+
+        #box307 {
+            background-color: white;
+            position: absolute;
+            left: 20px;
+            top: 50px;
+        }
+
+        #box308 {
+            background-color: white;
+            position: absolute;
+            left: 140px;
+            top: 50px;
+        }
+
+        #box309 {
+            background-color: white;
+            position: absolute;
+            left: 240px;
+            top: 50px;
+        }
+
+        #box310 {
+            background-color: white;
+            position: absolute;
+            left: 350px;
+            top: 50px;
+        }
+
+        #box311 {
+            background-color: white;
+            position: absolute;
+            left: 350px;
+            top: 120px;
+        }
+
+        #box312 {
+            background-color: white;
+            position: absolute;
+            left: 350px;
+            top: 250px;
+        }
+
+        #box313 {
+            background-color: white;
+            position: absolute;
+            left: 350px;
+            top: 320px;
+        }
+
+        #box314 {
+            background-color: white;
+            position: absolute;
+            left: 250px;
+            top: 200px;
+        }
+
+        #box315 {
+            background-color: white;
+            position: absolute;
+            left: 200px;
+            top: 200px;
+        }
+
+        #box316 {
+            background-color: white;
+            position: absolute;
+            left: 150px;
+            top: 200px;
+        }
+
+        #box401 {
+            background-color: white;
+            position: absolute;
+            left: 1000px;
+            top: 450px;
+        }
+
+        #box402 {
+            background-color: white;
+            position: absolute;
+            left: 900px;
+            top: 450px;
+        }
+
+        #box403 {
+            background-color: white;
+            position: absolute;
+            left: 800px;
+            top: 450px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h3>白；空席、グレー；予約、緑；～85分、黄；85～90分、赤；90分～</h3>
+    <div class="container">
+        <div id="box101" class="box"> 101</div>
+        <div id="box102" class="box"> 102</div>
+        <div id="box103" class="box"> 103</div>
+        <div id="box104" class="box"> 104</div>
+        <div id="box105" class="box"> 105</div>
+        <div id="box106" class="box"> 106</div>
+        <div id="box107" class="box"> 107</div>
+        <div id="box108" class="box"> 108</div>
+        <div id="box109" class="box"> 109</div>
+        <div id="box110" class="box"> 110</div>
+        <div id="box111" class="box"> 111</div>
+        <div id="box112" class="box"> 112</div>
+        <div id="box113" class="box"> 113</div>
+        <div id="box114" class="box"> 114</div>
+        <div id="box115" class="box"> 115</div>
+        <div id="box116" class="box"> 116</div>
+        <div id="box117" class="box"> 117</div>
+        <div id="box201" class="box"> 201</div>
+        <div id="box202" class="box"> 202</div>
+        <div id="box203" class="box"> 203</div>
+        <div id="box204" class="box"> 204</div>
+        <div id="box205" class="box"> 205</div>
+        <div id="box206" class="box"> 206</div>
+        <div id="box207" class="box"> 207</div>
+        <div id="box208" class="box"> 208</div>
+        <div id="box209" class="box"> 209</div>
+        <div id="box210" class="box"> 210</div>
+        <div id="box211" class="box"> 211</div>
+        <div id="box212" class="box"> 212</div>
+        <div id="box213" class="box"> 213</div>
+        <div id="box214" class="box"> 214</div>
+        <div id="box215" class="box"> 215</div>
+        <div id="box301" class="box"> 301</div>
+        <div id="box302" class="box"> 302</div>
+        <div id="box303" class="box"> 303</div>
+        <div id="box304" class="box"> 304</div>
+        <div id="box305" class="box"> 305</div>
+        <div id="box306" class="box"> 306</div>
+        <div id="box307" class="box"> 307</div>
+        <div id="box308" class="box"> 308</div>
+        <div id="box309" class="box"> 309</div>
+        <div id="box310" class="box"> 310</div>
+        <div id="box311" class="box"> 311</div>
+        <div id="box312" class="box"> 312</div>
+        <div id="box313" class="box"> 313</div>
+        <div id="box314" class="box"> 314</div>
+        <div id="box315" class="box"> 315</div>
+        <div id="box316" class="box"> 316</div>
+        <div id="box401" class="box"> 401</div>
+        <div id="box402" class="box"> 402</div>
+        <div id="box403" class="box"> 403</div>
+    </div>
+
+    <script>
+        let startTime101;
+        let startTime102;
+        let startTime103;
+        let startTime104;
+        let startTime105;
+        let startTime106;
+        let startTime107;
+        let startTime108;
+        let startTime109;
+        let startTime110;
+        let startTime111;
+        let startTime112;
+        let startTime113;
+        let startTime114;
+        let startTime115;
+        let startTime116;
+        let startTime117;
+        let startTime201;
+        let startTime202;
+        let startTime203;
+        let startTime204;
+        let startTime205;
+        let startTime206;
+        let startTime207;
+        let startTime208;
+        let startTime209;
+        let startTime210;
+        let startTime211;
+        let startTime212;
+        let startTime213;
+        let startTime214;
+        let startTime215;
+        let startTime301;
+        let startTime302;
+        let startTime303;
+        let startTime304;
+        let startTime305;
+        let startTime306;
+        let startTime307;
+        let startTime308;
+        let startTime309;
+        let startTime310;
+        let startTime311;
+        let startTime312;
+        let startTime313;
+        let startTime314;
+        let startTime315;
+        let startTime316;
+        let startTime401;
+        let startTime402;
+        let startTime403;
+
+        let click1011 = 0;
+        let click1012;
+        let click1021 = 0;
+        let click1022;
+        let click1031 = 0;
+        let click1032;
+        let click1041 = 0;
+        let click1042;
+        let click1051 = 0;
+        let click1052;
+        let click1061 = 0;
+        let click1062;
+        let click1071 = 0;
+        let click1072;
+        let click1081 = 0;
+        let click1082;
+        let click1091 = 0;
+        let click1092;
+        let click1101 = 0;
+        let click1102;
+        let click1111 = 0;
+        let click1112;
+        let click1121 = 0;
+        let click1122;
+        let click1131 = 0;
+        let click1132;
+        let click1141 = 0;
+        let click1142;
+        let click1151 = 0;
+        let click1152;
+        let click1161 = 0;
+        let click1162;
+        let click1171 = 0;
+        let click1172;
+        let click2011 = 0;
+        let click2012;
+        let click2021 = 0;
+        let click2022;
+        let click2031 = 0;
+        let click2032;
+        let click2041 = 0;
+        let click2042;
+        let click2051 = 0;
+        let click2052;
+        let click2061 = 0;
+        let click2062;
+        let click2071 = 0;
+        let click2072;
+        let click2081 = 0;
+        let click2082;
+        let click2091 = 0;
+        let click2092;
+        let click2101 = 0;
+        let click2102;
+        let click2111 = 0;
+        let click2112;
+        let click2121 = 0;
+        let click2122;
+        let click2131 = 0;
+        let click2132;
+        let click2141 = 0;
+        let click2142;
+        let click2151 = 0;
+        let click2152;
+        let click3011 = 0;
+        let click3012;
+        let click3021 = 0;
+        let click3022;
+        let click3031 = 0;
+        let click3032;
+        let click3041 = 0;
+        let click3042;
+        let click3051 = 0;
+        let click3052;
+        let click3061 = 0;
+        let click3062;
+        let click3071 = 0;
+        let click3072;
+        let click3081 = 0;
+        let click3082;
+        let click3091 = 0;
+        let click3092;
+        let click3101 = 0;
+        let click3102;
+        let click3111 = 0;
+        let click3112;
+        let click3121 = 0;
+        let click3122;
+        let click3131 = 0;
+        let click3132;
+        let click3141 = 0;
+        let click3142;
+        let click3151 = 0;
+        let click3152;
+        let click3161 = 0;
+        let click3162;
+        let click4011 = 0;
+        let click4012;
+        let click4021 = 0;
+        let click4022;
+        let click4031 = 0;
+        let click4032;
+
+
+        function changeColor101(element) {
+
+            click1012 = new Date().getTime();
+
+            if (click1012 - click1011 <= 300) {
+                element.style.borderColor = "black";
+                if (element.style.backgroundColor === "white") {
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime101 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }                      
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }                       
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            else if (click1012 - click1011 >= 500 && click1012 - click1011 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1011 = click1012;
+        }
+
+        function changeColor102(element) {
+
+            click1022 = new Date().getTime();
+
+            if (click1022 - click1021 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box102" && element.style.backgroundColor === "white") {
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime102 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1022 - click1021 >= 500 && click1022 - click1021 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1021 = click1022;
+        }
+
+        function changeColor103(element) {
+
+            click1032 = new Date().getTime();
+
+            if (click1032 - click1031 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box103" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime103 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1032 - click1031 >= 500 && click1032 - click1031 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1031 = click1032;
+        }
+
+        function changeColor104(element) {
+
+            click1042 = new Date().getTime();
+
+            if (click1042 - click1041 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box104" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime104 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1042 - click1041 >= 500 && click1042 - click1041 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1041 = click1042;
+        }
+
+        function changeColor105(element) {
+
+            click1052 = new Date().getTime();
+
+            if (click1052 - click1051 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box105" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime105 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1052 - click1051 >= 500 && click1052 - click1051 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1051 = click1052;
+        }
+
+        function changeColor106(element) {
+
+            click1062 = new Date().getTime();
+
+            if (click1062 - click1061 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box106" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime106 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1062 - click1061 >= 500 && click1062 - click1061 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1061 = click1062;
+        }
+
+        function changeColor107(element) {
+
+            click1072 = new Date().getTime();
+
+            if (click1072 - click1071 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box107" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime107 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1072 - click1071 >= 500 && click1072 - click1071 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1071 = click1072;
+        }
+
+        function changeColor108(element) {
+
+            click1082 = new Date().getTime();
+
+            if (click1082 - click1081 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box108" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime108 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1082 - click1081 >= 500 && click1082 - click1081 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1081 = click1082;
+        }
+
+        function changeColor109(element) {
+
+            click1092 = new Date().getTime();
+
+            if (click1092 - click1091 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box109" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime109 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1092 - click1091 >= 500 && click1092 - click1091 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1091 = click1092;
+        }
+
+        function changeColor110(element) {
+
+            click1102 = new Date().getTime();
+
+            if (click1102 - click1101 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box110" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime110 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1102 - click1101 >= 500 && click1102 - click1101 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1101 = click1102;
+        }
+
+        function changeColor111(element) {
+
+            click1112 = new Date().getTime();
+
+            if (click1112 - click1111 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box111" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime111 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1112 - click1111 >= 500 && click1112 - click1111 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1111 = click1112;
+        }
+
+        function changeColor112(element) {
+
+            click1122 = new Date().getTime();
+
+            if (click1122 - click1121 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box112" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime112 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1122 - click1121 >= 500 && click1122 - click1121 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1121 = click1122;
+        }
+
+        function changeColor113(element) {
+
+            click1132 = new Date().getTime();
+
+            if (click1132 - click1131 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box113" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime113 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1132 - click1131 >= 500 && click1132 - click1131 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1131 = click1132;
+        }
+
+        function changeColor114(element) {
+
+            click1142 = new Date().getTime();
+
+            if (click1142 - click1141 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box114" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime114 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1142 - click1141 >= 500 && click1142 - click1141 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1141 = click1142;
+        }
+
+        function changeColor115(element) {
+
+            click1152 = new Date().getTime();
+
+            if (click1152 - click1151 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box115" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime115 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1152 - click1151 >= 500 && click1152 - click1151 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1151 = click1152;
+        }
+
+        function changeColor116(element) {
+
+            click1162 = new Date().getTime();
+
+            if (click1162 - click1161 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box116" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime116 = new Date().getTime();  // 計測開始時刻を取得
+
+                } 
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1162 - click1161 >= 500 && click1162 - click1161 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1161 = click1162;
+        }
+
+        function changeColor117(element) {
+
+            click1172 = new Date().getTime();
+
+            if (click1172 - click1171 <= 300) {
+                element.style.borderColor = "black";
+                if (element.id === "box117" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "gray"; // グレーに変更
+                    startTime117 = new Date().getTime();  // 計測開始時刻を取得
+
+                }
+                else if (element.style.backgroundColor === "gray") {
+                    element.style.backgroundColor = "green";
+
+                    // 85分後に色を黄色に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "green") {
+                            element.style.backgroundColor = "yellow";
+                        }
+                    }, 5100000);
+                    // 90分後赤に変更
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow") {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                }
+                else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            } else if (click1172 - click1171 >= 500 && click1172 - click1171 <= 1000) {   // 予約回転
+                element.style.borderColor = "blue";
+                element.style.backgroundColor = "green";
+
+                // 85分後に色を黄色に変更するタイマーを設定
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "green") {
+                        element.style.backgroundColor = "yellow";
+                    }
+                }, 3000);
+                // 90分後赤に変更
+                setTimeout(() => {　//　時間オーバー
+                    if (element.style.backgroundColor === "yellow") {
+                        element.style.backgroundColor = "red";
+                    }
+                }, 5000);
+            }
+            click1171 = click1172;
+        }
+
+        function changeColor201(element) {
+
+            click2012 = new Date().getTime();
+
+            if (click2012 - click2011 <= 300) {
+                if (element.id === "box201" && element.style.backgroundColor === "white") {
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime201 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2011 = click2012;
+        }
+
+        function changeColor202(element) {
+
+            click2022 = new Date().getTime();
+
+            if (click2022 - click2021 <= 300) {
+                if (element.id === "box202" && element.style.backgroundColor === "white") {
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime202 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2021 = click2022;
+        }
+
+        function changeColor203(element) {
+
+            click2032 = new Date().getTime();
+
+            if (click2032 - click2031 <= 300) {
+                if (element.id === "box203" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime203 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2031 = click2032;
+        }
+
+        function changeColor204(element) {
+
+            click2042 = new Date().getTime();
+
+            if (click2042 - click2041 <= 300) {
+                if (element.id === "box204" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime204 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2041 = click2042;
+        }
+
+        function changeColor205(element) {
+
+            click2052 = new Date().getTime();
+
+            if (click2052 - click2051 <= 300) {
+                if (element.id === "box205" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime205 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2051 = click2052;
+        }
+
+        function changeColor206(element) {
+
+            click2062 = new Date().getTime();
+
+            if (click2062 - click2061 <= 300) {
+                if (element.id === "box206" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime206 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2061 = click2062;
+        }
+
+        function changeColor207(element) {
+
+            click2072 = new Date().getTime();
+
+            if (click2072 - click2071 <= 300) {
+                if (element.id === "box207" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime207 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2071 = click2072;
+        }
+
+        function changeColor208(element) {
+
+            click2082 = new Date().getTime();
+
+            if (click2082 - click2081 <= 300) {
+                if (element.id === "box208" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime208 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2081 = click2082;
+        }
+
+        function changeColor209(element) {
+
+            click2092 = new Date().getTime();
+
+            if (click2092 - click2091 <= 300) {
+                if (element.id === "box209" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime209 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2091 = click2092;
+        }
+
+        function changeColor210(element) {
+
+            click2102 = new Date().getTime();
+
+            if (click2102 - click2101 <= 300) {
+                if (element.id === "box210" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime210 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2101 = click2102;
+        }
+
+        function changeColor211(element) {
+
+            click2112 = new Date().getTime();
+
+            if (click2112 - click2111 <= 300) {
+                if (element.id === "box211" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime211 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2111 = click2112;
+        }
+
+        function changeColor212(element) {
+
+            click2122 = new Date().getTime();
+
+            if (click2122 - click2121 <= 300) {
+                if (element.id === "box212" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime212 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2121 = click2122;
+        }
+
+        function changeColor213(element) {
+
+            click2132 = new Date().getTime();
+
+            if (click2132 - click2131 <= 300) {
+                if (element.id === "box213" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime213 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2131 = click2132;
+        }
+
+        function changeColor214(element) {
+
+            click2142 = new Date().getTime();
+
+            if (click2142 - click2141 <= 300) {
+                if (element.id === "box214" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime214 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2141 = click2142;
+        }
+
+        function changeColor215(element) {
+
+            click2152 = new Date().getTime();
+
+            if (click2152 - click2151 <= 300) {
+                if (element.id === "box215" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime215 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        element.style.backgroundColor = "red";
+                    }, 5400000);
+
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click2151 = click2152;
+        }
+
+        function changeColor301(element) {
+
+            click3012 = new Date().getTime();
+
+            if (click3012 - click3011 <= 300) {
+                if (element.id === "box301" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime301 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime301) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3011 = click3012;
+        }
+
+        function changeColor302(element) {
+
+            click3022 = new Date().getTime();
+
+            if (click3022 - click3021 <= 300) {
+                if (element.id === "box302" && element.style.backgroundColor === "white") {
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime302 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime302) >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3021 = click3022;
+        }
+
+        function changeColor303(element) {
+
+            click3032 = new Date().getTime();
+
+            if (click3032 - click3031 <= 300) {
+                if (element.id === "box303" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime303 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime303) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3031 = click3032;
+        }
+
+        function changeColor304(element) {
+
+            click3042 = new Date().getTime();
+
+            if (click3042 - click3041 <= 300) {
+                if (element.id === "box304" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime304 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime304) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3041 = click3042;
+        }
+
+        function changeColor305(element) {
+
+            click3052 = new Date().getTime();
+
+            if (click3052 - click3051 <= 300) {
+                if (element.id === "box305" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime305 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime305) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3051 = click3052;
+        }
+
+        function changeColor306(element) {
+
+            click3062 = new Date().getTime();
+
+            if (click3062 - click3061 <= 300) {
+                if (element.id === "box306" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime306 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime306) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3061 = click3062;
+        }
+
+        function changeColor307(element) {
+
+            click3072 = new Date().getTime();
+
+            if (click3072 - click3071 <= 300) {
+                if (element.id === "box307" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime307 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime307) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3071 = click3072;
+        }
+
+        function changeColor308(element) {
+
+            click3082 = new Date().getTime();
+
+            if (click3082 - click3081 <= 300) {
+                if (element.id === "box308" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime308 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime308) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3081 = click3082;
+        }
+
+        function changeColor309(element) {
+
+            click3092 = new Date().getTime();
+
+            if (click3092 - click3091 <= 300) {
+                if (element.id === "box309" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime309 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime309) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3091 = click3092;
+        }
+
+        function changeColor310(element) {
+
+            click3102 = new Date().getTime();
+
+            if (click3102 - click3101 <= 300) {
+                if (element.id === "box310" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime310 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime310) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3101 = click3102;
+        }
+
+        function changeColor311(element) {
+
+            click3112 = new Date().getTime();
+
+            if (click3112 - click3111 <= 300) {
+                if (element.id === "box311" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime311 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime311) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3111 = click3112;
+        }
+
+        function changeColor312(element) {
+
+            click3122 = new Date().getTime();
+
+            if (click3122 - click3121 <= 300) {
+                if (element.id === "box312" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime312 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime312) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3121 = click3122;
+        }
+
+        function changeColor313(element) {
+
+            click3132 = new Date().getTime();
+
+            if (click3132 - click3131 <= 300) {
+                if (element.id === "box313" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime313 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime313) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3131 = click3132;
+        }
+
+        function changeColor314(element) {
+
+            click3142 = new Date().getTime();
+
+            if (click3142 - click3141 <= 300) {
+                if (element.id === "box314" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime314 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime314) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3141 = click3142;
+        }
+
+        function changeColor315(element) {
+
+            click3152 = new Date().getTime();
+
+            if (click3152 - click3151 <= 300) {
+                if (element.id === "box315" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime315 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime315) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3151 = click3152;
+        }
+
+        function changeColor316(element) {
+
+            click3162 = new Date().getTime();
+
+            if (click3162 - click3161 <= 300) {
+                if (element.id === "box316" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime316 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime316) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click3161 = click3162;
+        }
+
+        function changeColor401(element) {
+
+            click4012 = new Date().getTime();
+
+            if (click4012 - click4011 <= 300) {
+                if (element.id === "box401" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime401 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime401) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click4011 = click4012;
+        }
+
+        function changeColor402(element) {
+
+            click4022 = new Date().getTime();
+
+            if (click4022 - click4021 <= 300) {
+                if (element.id === "box402" && element.style.backgroundColor === "white") {
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime402 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime402) >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click4021 = click4022;
+        }
+
+        function changeColor403(element) {
+
+            click4032 = new Date().getTime();
+
+            if (click4032 - click4031 <= 300) {
+                if (element.id === "box403" && element.style.backgroundColor === "white") { // 食事中
+                    element.style.backgroundColor = "yellow"; // グレーに変更
+                    startTime403 = new Date().getTime();  // 計測開始時刻を取得
+
+                    // 3秒後に色を赤に変更するタイマーを設定
+                    setTimeout(() => {　//　時間オーバー
+                        if (element.style.backgroundColor === "yellow" && (new Date().getTime() - startTime403) / 1000 >= 5400) {
+                            element.style.backgroundColor = "red";
+                        }
+                    }, 5400000);
+                } else {
+                    element.style.backgroundColor = "white"; // 白に変更
+                }
+            }
+            click4031 = click4032;
+        }
+
+        document.getElementById("box101").addEventListener("click", function () {
+            changeColor101(this);
+        });
+        document.getElementById("box101").addEventListener("touchstart", function () {
+            changeColor101(this);
+        }); // スマホ対応
+
+        document.getElementById("box102").addEventListener("click", function () {
+            changeColor102(this);
+        });
+        document.getElementById("box102").addEventListener("touchstart", function () {
+            changeColor102(this);
+        }); // スマホ対応
+
+        document.getElementById("box103").addEventListener("click", function () {
+            changeColor103(this);
+        });
+        document.getElementById("box103").addEventListener("touchstart", function () {
+            changeColor103(this);
+        }); // スマホ対応
+
+        document.getElementById("box104").addEventListener("click", function () {
+            changeColor104(this);
+        });
+        document.getElementById("box104").addEventListener("touchstart", function () {
+            changeColor104(this);
+        }); // スマホ対応
+
+        document.getElementById("box105").addEventListener("click", function () {
+            changeColor105(this);
+        });
+        document.getElementById("box105").addEventListener("touchstart", function () {
+            changeColor105(this);
+        }); // スマホ対応
+
+        document.getElementById("box106").addEventListener("click", function () {
+            changeColor106(this);
+        });
+        document.getElementById("box106").addEventListener("touchstart", function () {
+            changeColor106(this);
+        }); // スマホ対応
+
+        document.getElementById("box107").addEventListener("click", function () {
+            changeColor107(this);
+        });
+        document.getElementById("box107").addEventListener("touchstart", function () {
+            changeColor107(this);
+        }); // スマホ対応
+
+        document.getElementById("box108").addEventListener("click", function () {
+            changeColor108(this);
+        });
+        document.getElementById("box108").addEventListener("touchstart", function () {
+            changeColor108(this);
+        }); // スマホ対応
+
+        document.getElementById("box109").addEventListener("click", function () {
+            changeColor109(this);
+        });
+        document.getElementById("box109").addEventListener("touchstart", function () {
+            changeColor109(this);
+        }); // スマホ対応
+
+        document.getElementById("box110").addEventListener("click", function () {
+            changeColor110(this);
+        });
+        document.getElementById("box110").addEventListener("touchstart", function () {
+            changeColor110(this);
+        }); // スマホ対応
+
+        document.getElementById("box111").addEventListener("click", function () {
+            changeColor111(this);
+        });
+        document.getElementById("box111").addEventListener("touchstart", function () {
+            changeColor111(this);
+        }); // スマホ対応
+
+        document.getElementById("box112").addEventListener("click", function () {
+            changeColor112(this);
+        });
+        document.getElementById("box112").addEventListener("touchstart", function () {
+            changeColor112(this);
+        }); // スマホ対応
+
+        document.getElementById("box113").addEventListener("click", function () {
+            changeColor113(this);
+        });
+        document.getElementById("box113").addEventListener("touchstart", function () {
+            changeColor113(this);
+        }); // スマホ対応
+
+        document.getElementById("box114").addEventListener("click", function () {
+            changeColor114(this);
+        });
+        document.getElementById("box114").addEventListener("touchstart", function () {
+            changeColor114(this);
+        }); // スマホ対応
+
+        document.getElementById("box115").addEventListener("click", function () {
+            changeColor115(this);
+        });
+        document.getElementById("box115").addEventListener("touchstart", function () {
+            changeColor115(this);
+        }); // スマホ対応
+
+        document.getElementById("box116").addEventListener("click", function () {
+            changeColor116(this);
+        });
+        document.getElementById("box116").addEventListener("touchstart", function () {
+            changeColor116(this);
+        }); // スマホ対応
+
+        document.getElementById("box117").addEventListener("click", function () {
+            changeColor117(this);
+        });
+        document.getElementById("box117").addEventListener("touchstart", function () {
+            changeColor117(this);
+        }); // スマホ対応
+
+        document.getElementById("box201").addEventListener("click", function () {
+            changeColor201(this);
+        });
+        document.getElementById("box201").addEventListener("touchstart", function () {
+            changeColor201(this);
+        }); // スマホ対応
+
+        document.getElementById("box202").addEventListener("click", function () {
+            changeColor202(this);
+        });
+        document.getElementById("box202").addEventListener("touchstart", function () {
+            changeColor202(this);
+        }); // スマホ対応
+
+        document.getElementById("box203").addEventListener("click", function () {
+            changeColor203(this);
+        });
+        document.getElementById("box203").addEventListener("touchstart", function () {
+            changeColor203(this);
+        }); // スマホ対応
+
+        document.getElementById("box204").addEventListener("click", function () {
+            changeColor204(this);
+        });
+        document.getElementById("box204").addEventListener("touchstart", function () {
+            changeColor204(this);
+        }); // スマホ対応
+
+        document.getElementById("box205").addEventListener("click", function () {
+            changeColor205(this);
+        });
+        document.getElementById("box205").addEventListener("touchstart", function () {
+            changeColor205(this);
+        }); // スマホ対応
+
+        document.getElementById("box206").addEventListener("click", function () {
+            changeColor206(this);
+        });
+        document.getElementById("box206").addEventListener("touchstart", function () {
+            changeColor206(this);
+        }); // スマホ対応
+
+        document.getElementById("box207").addEventListener("click", function () {
+            changeColor207(this);
+        });
+        document.getElementById("box207").addEventListener("touchstart", function () {
+            changeColor207(this);
+        }); // スマホ対応
+
+        document.getElementById("box208").addEventListener("click", function () {
+            changeColor208(this);
+        });
+        document.getElementById("box208").addEventListener("touchstart", function () {
+            changeColor208(this);
+        }); // スマホ対応
+
+        document.getElementById("box209").addEventListener("click", function () {
+            changeColor209(this);
+        });
+        document.getElementById("box209").addEventListener("touchstart", function () {
+            changeColor209(this);
+        }); // スマホ対応
+
+        document.getElementById("box210").addEventListener("click", function () {
+            changeColor210(this);
+        });
+        document.getElementById("box210").addEventListener("touchstart", function () {
+            changeColor210(this);
+        }); // スマホ対応
+
+        document.getElementById("box211").addEventListener("click", function () {
+            changeColor211(this);
+        });
+        document.getElementById("box211").addEventListener("touchstart", function () {
+            changeColor211(this);
+        }); // スマホ対応
+
+        document.getElementById("box212").addEventListener("click", function () {
+            changeColor212(this);
+        });
+        document.getElementById("box212").addEventListener("touchstart", function () {
+            changeColor212(this);
+        }); // スマホ対応
+
+        document.getElementById("box213").addEventListener("click", function () {
+            changeColor213(this);
+        });
+        document.getElementById("box213").addEventListener("touchstart", function () {
+            changeColor213(this);
+        }); // スマホ対応
+
+        document.getElementById("box214").addEventListener("click", function () {
+            changeColor214(this);
+        });
+        document.getElementById("box214").addEventListener("touchstart", function () {
+            changeColor214(this);
+        }); // スマホ対応
+
+        document.getElementById("box215").addEventListener("click", function () {
+            changeColor215(this);
+        });
+        document.getElementById("box215").addEventListener("touchstart", function () {
+            changeColor215(this);
+        }); // スマホ対応
+
+        document.getElementById("box301").addEventListener("click", function () {
+            changeColor301(this);
+        });
+        document.getElementById("box301").addEventListener("touchstart", function () {
+            changeColor301(this);
+        }); // スマホ対応
+
+        document.getElementById("box302").addEventListener("click", function () {
+            changeColor302(this);
+        });
+        document.getElementById("box302").addEventListener("touchstart", function () {
+            changeColor302(this);
+        }); // スマホ対応
+
+        document.getElementById("box303").addEventListener("click", function () {
+            changeColor303(this);
+        });
+        document.getElementById("box303").addEventListener("touchstart", function () {
+            changeColor303(this);
+        }); // スマホ対応
+
+        document.getElementById("box304").addEventListener("click", function () {
+            changeColor304(this);
+        });
+        document.getElementById("box304").addEventListener("touchstart", function () {
+            changeColor304(this);
+        }); // スマホ対応
+
+        document.getElementById("box305").addEventListener("click", function () {
+            changeColor305(this);
+        });
+        document.getElementById("box305").addEventListener("touchstart", function () {
+            changeColor305(this);
+        }); // スマホ対応
+
+        document.getElementById("box306").addEventListener("click", function () {
+            changeColor306(this);
+        });
+        document.getElementById("box306").addEventListener("touchstart", function () {
+            changeColor306(this);
+        }); // スマホ対応
+
+        document.getElementById("box307").addEventListener("click", function () {
+            changeColor307(this);
+        });
+        document.getElementById("box307").addEventListener("touchstart", function () {
+            changeColor307(this);
+        }); // スマホ対応
+
+        document.getElementById("box308").addEventListener("click", function () {
+            changeColor308(this);
+        });
+        document.getElementById("box308").addEventListener("touchstart", function () {
+            changeColor308(this);
+        }); // スマホ対応
+
+        document.getElementById("box309").addEventListener("click", function () {
+            changeColor309(this);
+        });
+        document.getElementById("box309").addEventListener("touchstart", function () {
+            changeColor309(this);
+        }); // スマホ対応
+
+        document.getElementById("box310").addEventListener("click", function () {
+            changeColor310(this);
+        });
+        document.getElementById("box310").addEventListener("touchstart", function () {
+            changeColor310(this);
+        }); // スマホ対応
+
+        document.getElementById("box311").addEventListener("click", function () {
+            changeColor311(this);
+        });
+        document.getElementById("box311").addEventListener("touchstart", function () {
+            changeColor311(this);
+        }); // スマホ対応
+
+        document.getElementById("box312").addEventListener("click", function () {
+            changeColor312(this);
+        });
+        document.getElementById("box312").addEventListener("touchstart", function () {
+            changeColor312(this);
+        }); // スマホ対応
+
+        document.getElementById("box313").addEventListener("click", function () {
+            changeColor313(this);
+        });
+        document.getElementById("box313").addEventListener("touchstart", function () {
+            changeColor313(this);
+        }); // スマホ対応
+
+        document.getElementById("box314").addEventListener("click", function () {
+            changeColor314(this);
+        });
+        document.getElementById("box314").addEventListener("touchstart", function () {
+            changeColor314(this);
+        }); // スマホ対応
+
+        document.getElementById("box315").addEventListener("click", function () {
+            changeColor315(this);
+        });
+        document.getElementById("box315").addEventListener("touchstart", function () {
+            changeColor315(this);
+        }); // スマホ対応
+
+        document.getElementById("box316").addEventListener("click", function () {
+            changeColor316(this);
+        });
+        document.getElementById("box316").addEventListener("touchstart", function () {
+            changeColor316(this);
+        }); // スマホ対応
+
+        document.getElementById("box401").addEventListener("click", function () {
+            changeColor401(this);
+        });
+        document.getElementById("box401").addEventListener("touchstart", function () {
+            changeColor401(this);
+        }); // スマホ対応
+
+        document.getElementById("box402").addEventListener("click", function () {
+            changeColor402(this);
+        });
+        document.getElementById("box402").addEventListener("touchstart", function () {
+            changeColor402(this);
+        }); // スマホ対応
+
+        document.getElementById("box403").addEventListener("click", function () {
+            changeColor403(this);
+        });
+        document.getElementById("box403").addEventListener("touchstart", function () {
+            changeColor403(this);
+        }); // スマホ対応
+
+    </script>
+
+</body>
+</html>
+
